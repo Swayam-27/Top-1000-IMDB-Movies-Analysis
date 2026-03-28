@@ -16,6 +16,26 @@ No actors. No directors. No marketing spend. Just the structured data available 
 - **Dropped**: Title, overview, poster links, actors, directors (to keep features structured and pre-release)
 
 ---
+## 📊 Key Results (Summary)
+
+- Best Model: Softmax Regression  
+- Accuracy: 70.7%  
+- Macro F1: 0.66  
+
+### Model Comparison (Macro F1)
+| Model | Setting | Macro F1 |
+|------|--------|---------|
+| Softmax Regression | Manual tuning | **0.658** |
+| Decision Tree | Optuna | **0.581**|
+| XGBoost | Optuna | **0.653** |
+
+### Insights:
+- Linear models slightly outperformed XGBoost, suggesting limited nonlinear signal in IMDb metadata  
+- Blockbusters were the hardest class to predict (F1 ≈ 0.57) due to class imbalance  
+- IMDb ratings are **not reliable predictors of revenue** (very weak correlation)  
+- Genre has a **significant impact on box office performance**  
+- Certificate affects earnings but **not rating quality**  
+---
 
 ## 📊 EDA — What We Explored
 
