@@ -175,7 +175,7 @@ All accuracy ranges reflect natural variation across runs (averaged).
 
 ---
 
-### 📌 Why XGBoost Didn't Win
+### 📌 Why Softmaxx Still edged XGBoost
 
 Tree-based models usually dominate tabular data. Not here — and that's actually an insight:
 
