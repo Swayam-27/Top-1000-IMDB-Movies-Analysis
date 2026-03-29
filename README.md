@@ -4,7 +4,7 @@ Everyone assumes that if a movie is highly rated on IMDb, it must have made mone
 
 > **Can IMDb metadata alone — ratings, votes, runtime, genre, certificate — predict whether a movie was a Flop, Mid, or Blockbuster?**
 
-No actors. No directors. No marketing spend. Just the structured data available before a movie even releases.
+No actors. No directors. No marketing spend. Just the structured data available on Imdb.
 
 ---
 
@@ -13,7 +13,7 @@ No actors. No directors. No marketing spend. Just the structured data available 
 - **Source**: IMDb Top 1000 Movies (Kaggle)
 - **Size**: 1000 rows × 16 columns
 - **Features used**: `IMDb_Rating`, `Metascore`, `Runtime`, `No_of_Votes`, `Genre`, `Certificate`
-- **Dropped**: Title, overview, poster links, actors, directors (to keep features structured and pre-release)
+- **Dropped**: Title, overview, poster links, actors, directors (to keep features structured)
 
 ---
 ## 📊 Key Results (Summary)
@@ -186,7 +186,7 @@ Tree-based models usually dominate tabular data. Not here — and that's actuall
 
 ## ⚠️ Important Notes
 
-- **Class imbalance is real and expected** — blockbusters are rare by definition. Macro F1 is used specifically to avoid inflating accuracy on the Flop majority class.
+- **Class imbalance is real and expected** — blockbusters are rare by definition. Macro F1 is used specifically to avoid inflating accuracy on the Flop majority class (Used class_weight='balanced' but accuracy dropped).
 - **Not all top-rated movies are rich** — *12 Angry Men* (9.0 rating, $4M gross) is in this dataset. Critical acclaim ≠ commercial success.
 - **Actors and directors were excluded intentionally** — the goal was structured, pre-release features only. Star power via NLP-based reputation scores is a natural next step.
 
