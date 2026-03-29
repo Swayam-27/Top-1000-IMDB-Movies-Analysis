@@ -25,9 +25,9 @@ No actors. No directors. No marketing spend. Just the structured data available 
 ### Model Comparison (Macro F1)
 | Model | Setting | Macro F1 |
 |------|--------|---------|
-| Softmax Regression | Manual tuning | **0.658** |
+| Softmax Regression | Manual tuning | **0.65** |
 | Decision Tree | Optuna | **0.581**|
-| XGBoost | Optuna | **0.653** |
+| XGBoost | Optuna | **0.62** |
 
 ### Insights:
 - Linear models slightly outperformed XGBoost, suggesting limited nonlinear signal in IMDb metadata  
@@ -164,13 +164,14 @@ Benefits:
 
 All accuracy ranges reflect natural variation across runs (averaged).
 
+
 | Metric | Softmax Regression | Decision Tree (Optuna) | XGBoost (Optuna) |
 |---|---|---|---|
-| Test Accuracy | 70–71% | 66–67% | 65% |
-| Macro F1 | 0.65 | 0.58 | 0.58 |
-| Flop F1 | 0.79 | 0.76 | 0.78 |
-| Mid F1 | 0.60 | 0.53 | 0.51 |
-| Blockbuster F1 | 0.61 | 0.53 | 0.46 |
+| Test Accuracy | 70–71% | 66–67% | ~68% |
+| Macro F1 | 0.65 | 0.58 | 0.62 |
+| Flop F1 | 0.79 | 0.76 | 0.80 |
+| Mid F1 | 0.60 | 0.53 | 0.53 |
+| Blockbuster F1 | 0.61 | 0.53 | 0.54 |
 
 ---
 
